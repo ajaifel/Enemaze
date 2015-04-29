@@ -14,7 +14,7 @@ using namespace std;
 
 /**
  * Represents the StarshipFontana application.  It has responsibilities for
- * * Creating and destroying the app window
+ * * Creating and destroying the app window (Blimp)
  * * Processing game events
  */
 class SFApp {
