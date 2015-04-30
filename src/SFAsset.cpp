@@ -1,6 +1,7 @@
 #include "SFAsset.h"
 
 int SFAsset::SFASSETID=0;
+int SFAsset::SCORE=0;
 
 SFAsset::SFAsset(SFASSETTYPE type, std::shared_ptr<SFWindow> window): type(type), sf_window(window) {
   this->id   = ++SFASSETID;
@@ -157,18 +158,19 @@ bool SFAsset::IsAlive() {
 }
 
 void SFAsset::HandleCollision() {
-  if(SFASSET_PROJECTILE == type || SFASSET_ALIEN == type) {
+  if(SFASSET_PROJECTILE == type) {
     SetNotAlive();
-    Score(1);
   }
-  if(SFASSET_WALL == type || SFASSET_PLAYER == type) {
-    Vector2 c = *(bbox->centre);
-    bbox->centre.reset();
-    bbox->centre = make_shared<Vector2>(c);
+  if(SFASSET_ALIEN == type) {
+    SetNotAlive();
+    AddScore(1);
   }
   if(SFASSET_COIN == type) {
     SetNotAlive();
-    Score(1);
+    AddScore(1);
   }
 }
 
+void SFAsset::AddScore(int a){
+  SCORE++;
+}
