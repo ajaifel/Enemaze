@@ -127,9 +127,6 @@ void SFAsset::GoNorth() {
 }
 
 void SFAsset::GoSouth() {
-  int w, h;
-  SDL_GetRendererOutputSize(sf_window->getRenderer(), &w, &h);
-  
   Vector2 c = *(bbox->centre) + Vector2(0.0f, -5.0f);
   if(!(c.getY() < 0) || !AllStop) {
   bbox->centre.reset();
