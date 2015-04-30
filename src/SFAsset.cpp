@@ -141,7 +141,6 @@ void SFAsset::AllStop() {
   Vector2 c = *(bbox->centre);
   bbox->centre.reset();
   bbox->centre = make_shared<Vector2>(c);
-  }
 }
 
 void SFAsset::GoNorthFire() {
