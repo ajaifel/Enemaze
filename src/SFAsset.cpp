@@ -135,7 +135,6 @@ void SFAsset::GoSouth() {
   bbox->centre.reset();
   bbox->centre = make_shared<Vector2>(c);
   }
-  AllStop = false;
 }
 
 bool AllStop = false;
