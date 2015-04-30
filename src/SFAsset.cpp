@@ -138,9 +138,7 @@ void SFAsset::GoSouth() {
   AllStop = false;
 }
 
-bool SFAsset::AllStop() {
-  return AllStop;
-}
+bool AllStop = false;
 
 void SFAsset::GoNorthFire() {
   Vector2 c = *(bbox->centre) + Vector2(0.0f, 1.0f);
