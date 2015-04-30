@@ -183,6 +183,6 @@ void SFAsset::TestScore(){
     auto win = make_shared<SFAsset>(SFASSET_WIN, sf_window);
     auto win_pos  = Point2(320, 240);
     win->SetPosition(win_pos);
-    winscreen.push_back(win);
+    wins.push_back(win);
   }
 }
