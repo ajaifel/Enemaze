@@ -22,6 +22,11 @@ SFApp::SFApp(std::shared_ptr<SFWindow> window) : fire(0), is_running(true), sf_w
   auto pos  = Point2((canvas_w/4), 100);
   coin->SetPosition(pos);
   coins.push_back(coin);
+  
+  auto wall = make_shared<SFAsset>(SFASSET_wall, sf_window);
+  auto wall_pos  = Point2((canvas_w/6), 44);
+  wall->SetPosition(wall_pos);
+  walls.push_back(wall);
 }
 
 SFApp::~SFApp() {
