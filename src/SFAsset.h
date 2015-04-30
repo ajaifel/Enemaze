@@ -40,7 +40,6 @@ public:
   virtual void      GoNorthFire();
   virtual void      SetNotAlive();
   virtual bool      IsAlive();
-  virtual bool      AllStop();
   virtual void      HandleCollision();
 
   virtual bool                      CollidesWith(shared_ptr<SFAsset>);
