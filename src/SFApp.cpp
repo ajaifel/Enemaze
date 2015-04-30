@@ -146,9 +146,6 @@ void SFApp::OnUpdateWorld() {
       }
     }
   }
-  if(TestScore()){
-    
-  }
 
   // remove dead aliens (the long way)
   list<shared_ptr<SFAsset>> tmp;
