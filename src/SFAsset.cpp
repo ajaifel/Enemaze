@@ -178,6 +178,6 @@ void SFAsset::AddScore(){
   SCORE++;
 }
 
-bool SFAsset::TestScore(){
-  return SCORE == 10;
+bool SFAsset::TestScore(int a){
+  return SCORE == a;
 }
