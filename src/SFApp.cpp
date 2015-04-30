@@ -74,7 +74,7 @@ int SFApp::OnExecute() {
 void SFApp::OnUpdateWorld() {
   // Update projectile positions
   for(auto p: projectiles) {
-    p->GoNorthFast();
+    p->GoNorthFire();
   }
 
   for(auto c: coins) {
