@@ -59,7 +59,7 @@ void SFApp::OnEvent(SFEvent& event) {
   case SFEVENT_UPDATE:
     OnUpdateWorld();
     OnRender();
-    TestScore();
+    /*TestScore(); */
     break;
   case SFEVENT_PLAYER_LEFT:
     player->GoWest();
