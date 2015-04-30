@@ -123,6 +123,17 @@ void SFAsset::GoNorth() {
   }
 }
 
+void SFAsset::GoSouth() {
+  int w, h;
+  SDL_GetRendererOutputSize(sf_window->getRenderer(), &w, &h);
+  
+  Vector2 c = *(bbox->centre) + Vector2(0.0f, -5.0f);
+  if(!(c.getY() < 0)) {
+  bbox->centre.reset();
+  bbox->centre = make_shared<Vector2>(c);
+  }
+}
+
 void SFAsset::GoNorthFire() {
   Vector2 c = *(bbox->centre) + Vector2(0.0f, 1.0f);
   bbox->centre.reset();
