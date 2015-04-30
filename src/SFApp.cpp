@@ -99,23 +99,17 @@ void SFApp::OnUpdateWorld() {
   for(auto p : projectiles) {
     for(auto a : aliens) {
       for(auto w : walls){
-        for(auto u : player){
+        
           for(auto c : coins){
             if(p->CollidesWith(a)) {
               p->HandleCollision();
               a->HandleCollision();
             }
-            if(u->CollidesWith(w)){
-              u->HandleCollision();
-            }
             if(p->CollidesWith(w)){
               p->HandleCollision();
             }
-            if(u->CollidesWith(c)){
-              c->HandleCollision();
-            }
           }
-        }
+        
       }
     }
   }
