@@ -163,4 +163,9 @@ void SFAsset::HandleCollision() {
   if(SFASSET_PROJECTILE == type || SFASSET_ALIEN == type) {
     SetNotAlive();
   }
+  if(SFASSET_WALL == type || SFASSET_PLAYER == type) {
+    bbox->centre.reset();
+    bbox->centre = make_shared<Vector2>(c);
+  }
+}
 }
