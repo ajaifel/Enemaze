@@ -159,6 +159,7 @@ bool SFAsset::IsAlive() {
 void SFAsset::HandleCollision() {
   if(SFASSET_PROJECTILE == type || SFASSET_ALIEN == type) {
     SetNotAlive();
+    Score(1);
   }
   if(SFASSET_WALL == type || SFASSET_PLAYER == type) {
     Vector2 c = *(bbox->centre);
@@ -167,6 +168,7 @@ void SFAsset::HandleCollision() {
   }
   if(SFASSET_COIN == type) {
     SetNotAlive();
+    Score(1);
   }
 }
 
