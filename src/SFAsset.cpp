@@ -123,8 +123,8 @@ void SFAsset::GoNorth() {
   }
 }
 
-void SFAsset::GoNorth() {
-  Vector2 c = *(bbox->centre) + Vector2(0.0f, 5.0f);
+void SFAsset::GoNorthFire() {
+  Vector2 c = *(bbox->centre) + Vector2(0.0f, 1.0f);
   bbox->centre.reset();
   bbox->centre = make_shared<Vector2>(c);
 }
