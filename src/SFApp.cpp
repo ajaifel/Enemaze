@@ -115,7 +115,7 @@ void SFApp::OnUpdateWorld() {
   }
 
   for(auto c: coins) {
-    c->GoNorth();
+    
   }
 
   // Update enemy positions
@@ -138,6 +138,9 @@ void SFApp::OnUpdateWorld() {
             }
             if(p->CollidesWith(w)){
               p->HandleCollision();
+            }
+            if(player->CollidesWith(c)){
+              c->HandleCollision();
             }
           }
       }
