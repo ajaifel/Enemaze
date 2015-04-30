@@ -113,19 +113,11 @@ void SFApp::OnUpdateWorld() {
   for(auto p: projectiles) {
     p->GoNorthFire();
   }
-
-  for(auto c: coins) {
-    
-  }
-
-  // Update enemy positions
+  
   for(auto a : aliens) {
-    // do something here
+    
   }
   
-  for(auto w : walls) {
-    
-  }
 
   // Detect collisions
   for(auto p : projectiles) {
@@ -147,6 +139,10 @@ void SFApp::OnUpdateWorld() {
     }
   }
 
+  if(TestScore()){
+    
+  }
+  
   // remove dead aliens (the long way)
   list<shared_ptr<SFAsset>> tmp;
   for(auto a : aliens) {
