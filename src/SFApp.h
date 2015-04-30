@@ -38,6 +38,7 @@ private:
   list<shared_ptr<SFAsset> > aliens;
   list<shared_ptr<SFAsset> > coins;
   list<shared_ptr<SFAsset> > walls;
+  list<shared_ptr<SFAsset> > winscreen;
 
   int fire;
 };
