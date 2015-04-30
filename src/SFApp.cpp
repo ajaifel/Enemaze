@@ -155,15 +155,6 @@ void SFApp::OnUpdateWorld() {
   }
   aliens.clear();
   aliens = list<shared_ptr<SFAsset>>(tmp);
-  
-  list<shared_ptr<SFAsset>> tmp2;
-  for(auto c : coins) {
-      if(c->IsAlive()) {
-        tmp.push_back(c);
-      }
-  }
-  coins.clear();
-  coins = list<shared_ptr<SFAsset>>(tmp2);
 }
 
 void SFApp::OnRender() {
@@ -181,7 +172,7 @@ void SFApp::OnRender() {
   }
 
   for(auto c: coins) {
-    if(c->IsAlive()) {c->OnRender();}
+    c->OnRender();
   }
   
   for(auto w : walls) {
