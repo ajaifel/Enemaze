@@ -108,7 +108,7 @@ void SFApp::OnUpdateWorld() {
               p->HandleCollision();
             }
             if(player->CollidesWith(w)){
-              player->HandleCollision;
+              player->HandleCollision();
             }
           }
       }
