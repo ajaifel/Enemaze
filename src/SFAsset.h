@@ -57,6 +57,7 @@ private:
   std::shared_ptr<SFWindow>   sf_window;
 
   static int SFASSETID;
+  static int SCORE;
 };
 
 #endif
