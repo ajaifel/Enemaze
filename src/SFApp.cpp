@@ -117,8 +117,13 @@ void SFApp::OnUpdateWorld() {
   // remove dead aliens (the long way)
   list<shared_ptr<SFAsset>> tmp;
   for(auto a : aliens) {
-    if(a->IsAlive()) {
-      tmp.push_back(a);
+    for(auto p : projectiles){
+      if(a->IsAlive()) {
+        tmp.push_back(a);
+      }
+      if(p->IsAlive()) {
+        tmp.push_back(p);
+      }
     }
   }
   aliens.clear();
