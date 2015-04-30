@@ -1,4 +1,4 @@
-# Starship Fontana #
+# Enemaze #
 
 This is an example C++ application using the SDL library.
 It tries to be as nicely C++11 as possible but do keep in
