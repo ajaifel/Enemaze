@@ -134,8 +134,6 @@ void SFAsset::GoSouth() {
   }
 }
 
-bool AllStop = false;
-
 void SFAsset::GoNorthFire() {
   Vector2 c = *(bbox->centre) + Vector2(0.0f, 1.0f);
   bbox->centre.reset();
@@ -169,9 +167,6 @@ void SFAsset::HandleCollision() {
   }
   if(SFASSET_COIN == type) {
     SetNotAlive();
-  }
-  if(SFASSET_PLAYER == type) {
-    AllStop = true;
   }
 }
 
