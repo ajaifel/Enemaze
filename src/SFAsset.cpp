@@ -131,16 +131,15 @@ void SFAsset::GoSouth() {
   SDL_GetRendererOutputSize(sf_window->getRenderer(), &w, &h);
   
   Vector2 c = *(bbox->centre) + Vector2(0.0f, -5.0f);
-  if(!(c.getY() < 0)) {
+  if(!(c.getY() < 0) || !AllStop) {
   bbox->centre.reset();
   bbox->centre = make_shared<Vector2>(c);
   }
+  AllStop = false;
 }
 
-void SFAsset::AllStop() {
-  Vector2 c = *(bbox->centre);
-  bbox->centre.reset();
-  bbox->centre = make_shared<Vector2>(c);
+bool SFAsset::AllStop() {
+  return AllStop;
 }
 
 void SFAsset::GoNorthFire() {
@@ -178,7 +177,7 @@ void SFAsset::HandleCollision() {
     SetNotAlive();
   }
   if(SFASSET_PLAYER == type) {
-    AllStop();
+    AllStop = true;
   }
 }
 
