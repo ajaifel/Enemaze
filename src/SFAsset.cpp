@@ -163,14 +163,18 @@ void SFAsset::HandleCollision() {
   }
   if(SFASSET_ALIEN == type) {
     SetNotAlive();
-    AddScore(1);
+    AddScore();
   }
   if(SFASSET_COIN == type) {
     SetNotAlive();
-    AddScore(1);
+    AddScore();
   }
 }
 
-void SFAsset::AddScore(int a){
+void SFAsset::AddScore(){
   SCORE++;
+}
+
+bool SFAsset::TestScore(){
+  return SCORE == 10;
 }
