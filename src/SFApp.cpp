@@ -133,6 +133,10 @@ void SFApp::OnRender() {
   for(auto c: coins) {
     c->OnRender();
   }
+  
+  for(auto w : walls) {
+    w->OnRender();
+  }
 
   // Switch the off-screen buffer to be on-screen
   SDL_RenderPresent(sf_window->getRenderer());
