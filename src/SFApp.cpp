@@ -141,7 +141,7 @@ void SFApp::OnUpdateWorld() {
     }
   }
 
-  if(TestScore()){
+  if(TestScore(10)){
     auto win = make_shared<SFAsset>(SFASSET_COIN, sf_window);
     auto pos  = Point2((canvas_w/2), (canvas_h/2));
     win->SetPosition(pos);
