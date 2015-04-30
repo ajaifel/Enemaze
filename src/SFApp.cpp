@@ -13,32 +13,34 @@ SFApp::SFApp(std::shared_ptr<SFWindow> window) : fire(0), is_running(true), sf_w
                     12, 12, 12, 12, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 17, 18, 19 }; 
   int wallY [] = { 0, 1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 5, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14, 7, 7, 7, 7, 7, 
                     8, 9, 10, 2, 3, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 4, 4, 4 };
+  int alienX [] = { 1, 4, 10, 14, 18 };
+  int alienY [] = { 2, 1, 2, 1, 6 };
+  int coinX [] = { 13, 8, 12, 18, 17 };
+  int coinY [] = { 2, 6, 1, 2, 5 };
   
   const int number_of_walls = 46;
   for(int i=0; i<number_of_walls; i++) {
-    // place an alien at width/number_of_aliens * i
     auto wall = make_shared<SFAsset>(SFASSET_WALL, sf_window);
     auto wall_pos  = Point2(((canvas_w/20) * wallX[i] ) + 16, ((canvas_h/15) * wallY[i]) + 16);
     wall->SetPosition(wall_pos);
     walls.push_back(wall);
   }
 
-  auto coin = make_shared<SFAsset>(SFASSET_COIN, sf_window);
-  auto pos  = Point2((canvas_w/4), 100);
-  coin->SetPosition(pos);
-  coins.push_back(coin);
+  const int number_of_coins = 5;
+  for(int i=0; i<number_of_coins; i++) {
+    auto coin = make_shared<SFAsset>(SFASSET_COIN, sf_window);
+    auto pos  = Point2(((canvas_w/20) * coinX[i] ) + 16, ((canvas_h/15) * coinY[i]) + 16);
+    coin->SetPosition(pos);
+    coins.push_back(coin);
+  }
   
-  /*auto wall = make_shared<SFAsset>(SFASSET_WALL, sf_window);
-  auto wall_pos  = Point2((canvas_w/6), 44);
-  wall->SetPosition(wall_pos);
-  walls.push_back(wall);
-  */
-  
-  /*auto alien = make_shared<SFAsset>(SFASSET_ALIEN, sf_window);
-    auto pos   = Point2(((canvas_w/number_of_aliens)*i) + 30 , 200.0f);
+  const int number_of_aliens = 5;
+  for(int i=0; i<number_of_aliens; i++) {
+    auto alien = make_shared<SFAsset>(SFASSET_ALIEN, sf_window);
+    auto pos   = Point2(((canvas_w/20) * alienX[i] ) + 16, ((canvas_h/15) * alienY[i]) + 16);
     alien->SetPosition(pos);
     aliens.push_back(alien);
-    */
+  }
 }
 
 SFApp::~SFApp() {
