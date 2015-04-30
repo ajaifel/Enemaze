@@ -140,7 +140,10 @@ void SFApp::OnUpdateWorld() {
   }
 
   if(TestScore()){
-    
+    auto win = make_shared<SFAsset>(SFASSET_COIN, sf_window);
+    auto pos  = Point2((canvas_w/2), (canvas_h/2));
+    win->SetPosition(pos);
+    winscreen.push_back(win);
   }
   
   // remove dead aliens (the long way)
