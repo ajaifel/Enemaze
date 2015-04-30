@@ -14,8 +14,8 @@ SFApp::SFApp(std::shared_ptr<SFWindow> window) : fire(0), is_running(true), sf_w
   int wallY [] = { 0, 1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 5, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14, 7, 7, 7, 7, 7, 
                     8, 9, 10, 2, 3, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 4, 4, 4 };
   
-  const int number_of_aliens = 10;
-  for(int i=0; i<number_of_aliens; i++) {
+  const int number_of_walls = 46;
+  for(int i=0; i<number_of_walls; i++) {
     // place an alien at width/number_of_aliens * i
     auto wall = make_shared<SFAsset>(SFASSET_WALL, sf_window);
     auto wall_pos  = Point2(((canvas_w/20) * wallX[i] ) + 16, ((canvas_h/15) * wallY[i]) + 16);
