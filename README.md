@@ -6,11 +6,11 @@ mind that SDL is written in C and, at some stage, you have
 to interface with it.
 
 ## Story ##
-The evil b’Kuhn has stolen the code to Earth’s defence system.
-With this code he can, at any time, defeat the entire human race.
-Only one woman is brave enough to go after b’Kuhn. Will she be
-Earth’s hero? Puzzle your way though the universe in the company
-of Commander Fontana in **Starship Fontana**.
+As a family with a long standing history of maze building
+it was little surprise that you've been summoned to the
+kings court on a matter of grave mazeness. When you arrive
+you find the royal mazes filled with defenseless protesters.
+Better clear them off with guns, to be sure.
 
 ## Installation ##
 You will have to have the SDL development libraries installed on
@@ -18,13 +18,13 @@ your system.  The easiest way to compile is to use a command-line
 
 ```bash
 $ g++ -c -std=c++11 src/*.cpp
-$ g++ -o starship *.o -lSDL2 -lSDL2_image
+$ g++ -o enemaze *.o -lSDL2 -lSDL2_image
 ```
 
-which will produce an executable file called "starship" in the
+which will produce an executable file called "enemaze" in the
 top-level directory.  To execute this file do the following
 
-`$ ./starship`
+`$ ./enemaze`
  
 from the top-level directory.  The game will expect to find the
 `assets` directory under its current working directory.
