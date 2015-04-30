@@ -174,6 +174,10 @@ void SFApp::OnRender() {
   for(auto w : walls) {
     w->OnRender();
   }
+  
+  for(auto f : wins) {
+    f->OnRender();
+  }
 
   // Switch the off-screen buffer to be on-screen
   SDL_RenderPresent(sf_window->getRenderer());
