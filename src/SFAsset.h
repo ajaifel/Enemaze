@@ -33,7 +33,7 @@ public:
   virtual Point2    GetPosition();
   virtual SFAssetId GetId();
   virtual void      OnRender();
-  virtual void      TestScore();
+  /*virtual void      TestScore();*/
   virtual void      GoEast();
   virtual void      GoWest();
   virtual void      GoNorth();
