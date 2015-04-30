@@ -47,38 +47,34 @@ void SFApp::OnEvent(SFEvent& event) {
     OnRender();
     break;
   case SFEVENT_PLAYER_LEFT:
+    player->GoWest();
     for(auto w : walls){
       if((player->CollidesWith(w))){
         player->GoEast();
-      }else{ 
-        player->GoWest();
       }
     }
     break;
   case SFEVENT_PLAYER_RIGHT:
+    player->GoEast();
     for(auto w : walls){
       if((player->CollidesWith(w))){
         player->GoWest();
-      }else{ 
-        player->GoEast();
       }
     }
     break;
   case SFEVENT_PLAYER_UP:
+    player->GoNorth();
     for(auto w : walls){
       if((player->CollidesWith(w))){
         player->GoSouth();
-      }else{ 
-        player->GoNorth();
       }
     }
     break;
   case SFEVENT_PLAYER_DOWN:
+    player->GoSouth();
     for(auto w : walls){
       if((player->CollidesWith(w))){
         player->GoNorth();
-      }else{ 
-        player->GoSouth();
       }
     }
     break;  
