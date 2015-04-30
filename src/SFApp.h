@@ -25,6 +25,7 @@ public:
   int     OnExecute();
   void    OnUpdateWorld();
   void    OnRender();
+  void    TestScore();
 
   void    FireProjectile();
 private:
