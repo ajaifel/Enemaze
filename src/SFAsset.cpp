@@ -178,5 +178,8 @@ void SFAsset::HandleCollision() {
   if(SFASSET_COIN == type) {
     SetNotAlive();
   }
+  if(SFASSET_PLAYER == type) {
+    AllStop();
+  }
 }
 
