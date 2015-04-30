@@ -121,6 +121,10 @@ void SFApp::OnUpdateWorld() {
     
   }
   
+  for(auto f : wins) {
+    
+  }
+  
 
   // Detect collisions
   for(auto p : projectiles) {
