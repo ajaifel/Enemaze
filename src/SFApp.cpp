@@ -56,7 +56,9 @@ void SFApp::OnEvent(SFEvent& event) {
     player->GoNorth();
     break;
   case SFEVENT_PLAYER_DOWN:
-    player->GoSouth();
+    if(!(player->CollidesWith(w))){
+      player->GoSouth();
+    }
     break;  
   case SFEVENT_FIRE:
     fire ++;
@@ -106,9 +108,6 @@ void SFApp::OnUpdateWorld() {
             }
             if(p->CollidesWith(w)){
               p->HandleCollision();
-            }
-            if(player->CollidesWith(w)){
-              player->HandleCollision();
             }
           }
       }
