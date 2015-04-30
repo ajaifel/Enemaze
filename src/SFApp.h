@@ -41,6 +41,5 @@ private:
   list<shared_ptr<SFAsset> > winscreen;
 
   int fire;
-  int wins;
 };
 #endif
