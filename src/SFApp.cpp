@@ -99,7 +99,6 @@ void SFApp::OnUpdateWorld() {
   for(auto p : projectiles) {
     for(auto a : aliens) {
       for(auto w : walls){
-        
           for(auto c : coins){
             if(p->CollidesWith(a)) {
               p->HandleCollision();
@@ -108,8 +107,10 @@ void SFApp::OnUpdateWorld() {
             if(p->CollidesWith(w)){
               p->HandleCollision();
             }
+            if(player->CollidesWith(w)){
+              player->HandleCollision;
+            }
           }
-        
       }
     }
   }
