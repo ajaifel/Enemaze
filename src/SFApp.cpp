@@ -98,9 +98,19 @@ void SFApp::OnUpdateWorld() {
   // Detect collisions
   for(auto p : projectiles) {
     for(auto a : aliens) {
-      if(p->CollidesWith(a)) {
-        p->HandleCollision();
-        a->HandleCollision();
+      for(auto w : walls){
+        for(auto u : player){
+          if(p->CollidesWith(a)) {
+            p->HandleCollision();
+            a->HandleCollision();
+          }
+          if(u->CollidesWith(w)){
+           u->HandleCollision();
+          }
+          if(p->CollidesWith(w)){
+            p->HandleCollision();
+          }
+        }
       }
     }
   }
