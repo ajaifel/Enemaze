@@ -25,7 +25,7 @@ public:
   int     OnExecute();
   void    OnUpdateWorld();
   void    OnRender();
-  void    TestScore();
+  /*void    TestScore();*/
 
   void    FireProjectile();
 private:
@@ -39,7 +39,7 @@ private:
   list<shared_ptr<SFAsset> > aliens;
   list<shared_ptr<SFAsset> > coins;
   list<shared_ptr<SFAsset> > walls;
-  list<shared_ptr<SFAsset> > wins;
+  /*list<shared_ptr<SFAsset> > wins;*/
 
   int fire;
 };
