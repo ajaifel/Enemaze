@@ -90,6 +90,10 @@ void SFApp::OnUpdateWorld() {
   for(auto a : aliens) {
     // do something here
   }
+  
+  for(auto w : walls) {
+    
+  }
 
   // Detect collisions
   for(auto p : projectiles) {
