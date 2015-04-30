@@ -177,12 +177,3 @@ void SFAsset::HandleCollision() {
 void SFAsset::AddScore(){
   SCORE++;
 }
-
-void SFAsset::TestScore(){
-  if(SCORE >= 10){
-    auto win = make_shared<SFAsset>(SFASSET_WIN, sf_window);
-    auto win_pos  = Point2(320, 240);
-    win->SetPosition(win_pos);
-    wins.push_back(win);
-  }
-}
