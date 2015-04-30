@@ -8,14 +8,23 @@ SFApp::SFApp(std::shared_ptr<SFWindow> window) : fire(0), is_running(true), sf_w
   player  = make_shared<SFAsset>(SFASSET_PLAYER, sf_window);
   auto player_pos = Point2(canvas_w/2, 22);
   player->SetPosition(player_pos);
-
+  
+  int wallX [] = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 9, 10, 11, 12, 12,
+                    12, 12, 12, 12, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 17, 18, 19 } 
+  int wallY [] = { 0, 1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 5, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14, 7, 7, 7, 7, 7, 
+                    8, 9, 10, 2, 3, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 4, 4, 4 }
+  
   const int number_of_aliens = 10;
   for(int i=0; i<number_of_aliens; i++) {
+    int j = 0;
     // place an alien at width/number_of_aliens * i
     auto wall = make_shared<SFAsset>(SFASSET_WALL, sf_window);
     auto wall_pos  = Point2(((canvas_w/10)*i)+30, 200);
     wall->SetPosition(wall_pos);
     walls.push_back(wall);
+    
+    
+    j++;
   }
 
   auto coin = make_shared<SFAsset>(SFASSET_COIN, sf_window);
