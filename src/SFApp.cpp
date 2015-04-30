@@ -121,9 +121,9 @@ void SFApp::OnUpdateWorld() {
     
   }
   
-  for(auto f : wins) {
+  /*for(auto f : wins) {
     
-  }
+  }*/
   
 
   // Detect collisions
@@ -179,9 +179,9 @@ void SFApp::OnRender() {
     w->OnRender();
   }
   
-  for(auto f : wins) {
+  /*for(auto f : wins) {
     f->OnRender();
-  }
+  }*/
 
   // Switch the off-screen buffer to be on-screen
   SDL_RenderPresent(sf_window->getRenderer());
