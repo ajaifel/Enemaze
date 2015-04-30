@@ -164,8 +164,12 @@ void SFAsset::HandleCollision() {
     SetNotAlive();
   }
   if(SFASSET_WALL == type || SFASSET_PLAYER == type) {
+    Vector2 c = *(bbox->centre)
     bbox->centre.reset();
     bbox->centre = make_shared<Vector2>(c);
   }
+  if(SFASSET_COIN == type) {
+    SetNotAlive();
+  }
 }
-}
+
