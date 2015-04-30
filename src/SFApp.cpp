@@ -59,6 +59,7 @@ void SFApp::OnEvent(SFEvent& event) {
   case SFEVENT_UPDATE:
     OnUpdateWorld();
     OnRender();
+    TestScore();
     break;
   case SFEVENT_PLAYER_LEFT:
     player->GoWest();
@@ -140,8 +141,6 @@ void SFApp::OnUpdateWorld() {
       }
     }
   }
-
-  TestScore();
   
   // remove dead aliens (the long way)
   list<shared_ptr<SFAsset>> tmp;
